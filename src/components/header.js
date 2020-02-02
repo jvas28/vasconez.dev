@@ -1,35 +1,53 @@
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
+import Img from "../components/image"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+const Header = ({ siteTitle }) => {
+  return (
+    <header>
+      <nav className="flex items-center justify-between flex-wrap bg-blue-900 p-3">
+        <AniLink
+          swipe
           to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
+          direction="right"
+          className="flex items-center flex-shrink-0 text-white mr-6"
         >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+          <div className="w-10 h-10  mr-4 rounded-full">
+            <Img className="bg-cover rounded-full" />
+          </div>
+          <span className="text-md text-black tracking-tight text-white">
+            Julio Vásconez
+          </span>
+        </AniLink>
+        <div className="flex items-center flex-shrink-0 text-white mr-6">
+          <a
+            href="https://github.com/jvas28"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="mx-2 text-white cursor-pointer"
+          >
+            <i className="fab fa-github "></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jvasconez/"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="mx-2 text-white cursor-pointer"
+          >
+            <i className="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="mailto:julio@vasconez.dev"
+            className="mx-2 text-white cursor-pointer"
+          >
+            <i className="fas fa-envelope"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
