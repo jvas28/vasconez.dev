@@ -15,13 +15,13 @@
     @apply font-bold;
   }
   & h1 {
-    @apply leading-tight text-2xl font-extrabold text-black mb-2 mt-10;
+    @apply leading-tight text-xl font-extrabold text-black mb-2 mt-10;
   }
   & h2 {
-    @apply leading-tight text-xl font-bold text-black mb-2 mt-10;
+    @apply leading-tight text-lg font-bold text-black mb-2 mt-10;
   }
   & h3 {
-    @apply leading-tight text-lg font-bold text-black mt-8 -mb-2;
+    @apply leading-tight text-base font-bold text-black mt-8 -mb-2;
   }
   & blockquote {
     @apply border-l-4 border-gray-400 pl-4 italic;
@@ -35,6 +35,6 @@
   }
 }
 code, pre {
-  @apply rounded;
+  @apply rounded text-base;
 }
 @import 'prism-one-dark.scss';

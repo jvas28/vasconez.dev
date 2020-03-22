@@ -6,13 +6,16 @@ const WhoAmI = () => {
         return (
             <>
             <div
-                className="card shadow-lg rounded-lg bg-white m-2 p-3 md:p-0 md:mr-3 flex flex-col overflow-hidden"
+                className="card shadow-lg
+                rounded-lg bg-white m-2 p-3
+                md:p-0 md:mr-3 flex flex-col
+                w-full md:w-2/3
+                overflow-hidden"
                 style={{ maxWidth: 400 }}
-            >
-            <div className="p-3">
-              <div className="px-20 pb-3">
-                <Img className="rounded-full border" />
+            ><div className="">
+                <Img className="w-full border" />
               </div>
+            <div className="p-3">
               <p className="w-full text-lg text-center mt-2">
                 Julio Vásconez
               </p>
@@ -32,7 +35,7 @@ const WhoAmI = () => {
               <p className="py-1 px-2 text-xs text-center">
                 <button className={"cursor-pointer p-1 rounded " +(lang==='es' ? 'font-bold':'text-gray-600')} onClick={()=>changeLocale('es')}>ES</button> | <button className={"cursor-pointer p-1 rounded " +(lang==='en' ? 'font-bold':'text-gray-600')} onClick={()=>changeLocale('en')} >EN</button>
               </p>
-              <p className="py-1 px-4 text-lg italic font-medium font-serif text-gray-600 text-center h-20">
+              <p className="py-1 px-1 md:px-4 text-lg italic font-medium font-serif text-gray-600 text-center h-20">
                 "{formatMessage({id:'description'})}"
               </p>
             
