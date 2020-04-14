@@ -4,16 +4,14 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 const Header = ({ siteTitle }) => {
   return (
     <header>
-      <nav className="flex items-center justify-between flex-wrap bg-blue-900 p-3">
+      <nav className="flex items-center justify-between flex-wrap bg-gray-900 p-3">
         <AniLink
           swipe
           to="/"
           direction="right"
-          className="flex items-center flex-shrink-0 bg-gray-900 text-white p-2 rounded mr-6"
+          className="flex items-center flex-shrink-0 text-white p-2 rounded mr-6"
         >
-          <span className="text-xs tracking-tight">
-            jvas28 $
-          </span>
+          <span className="text-xs tracking-tight">jvas28 $</span>
         </AniLink>
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <a

@@ -4,21 +4,23 @@ import Footer from "../components/footer"
 import { injectIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 import "../styles/index.scss"
-const BlogTemplate = (props) => {
-  const { data } = props;
+const BlogTemplate = props => {
+  const { data } = props
   const { markdownRemark } = data // data.markdownRemark holds your post data
-  console.log(props);
-  
-  if(!markdownRemark) {
-    return null;
+  console.log(props)
+
+  if (!markdownRemark) {
+    return null
   }
   const { frontmatter, html } = markdownRemark
   return (
     <div className="flex flex-col min-h-screen w-full">
       <Header data={data} />
-      <main className="flex flex-grow w-full bg-gray-200 md:p-8">
-        <div className="bg-white bg-white mx-auto flex flex-col w-full p-5">
-          <h1 className="text-2xl font-extrabold">{frontmatter.title}</h1>
+      <main className="flex flex-grow w-full bg-gray-800 md:p-8">
+        <div className="bg-gray-900 mx-auto flex flex-col w-full p-5">
+          <h1 className="text-2xl font-extrabold text-white">
+            {frontmatter.title}
+          </h1>
           <div className="text-sm flex flex-row items-center text-gray-600">
             <i className="fas fa-calendar pr-2"></i>
             <h2 className="text-xs px-1">{frontmatter.date}</h2>
@@ -42,7 +44,7 @@ const BlogTemplate = (props) => {
 }
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path }}) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
@@ -53,4 +55,4 @@ export const pageQuery = graphql`
     }
   }
 `
-export default injectIntl(BlogTemplate);
+export default injectIntl(BlogTemplate)

@@ -1,27 +1,27 @@
 .markdown {
-  @apply text-lg text-gray-900 leading-normal;
+  @apply text-lg text-white leading-normal;
   & > * + *,
   & li + li,
   & li > p + p {
     @apply mt-6;
   }
   & strong {
-    @apply text-black font-bold;
+    @apply text-white font-bold;
   }
   & a {
-    @apply text-black font-semibold;
+    @apply text-white font-semibold;
   }
   & strong a {
     @apply font-bold;
   }
   & h1 {
-    @apply leading-tight text-xl font-extrabold text-black mb-2 mt-10;
+    @apply leading-tight text-xl font-extrabold text-white mb-2 mt-10;
   }
   & h2 {
-    @apply leading-tight text-lg font-bold text-black mb-2 mt-10;
+    @apply leading-tight text-lg font-bold text-white mb-2 mt-10;
   }
   & h3 {
-    @apply leading-tight text-base font-bold text-black mt-8 -mb-2;
+    @apply leading-tight text-base font-bold text-white mt-8 -mb-2;
   }
   & blockquote {
     @apply border-l-4 border-gray-400 pl-4 italic;
@@ -34,7 +34,8 @@
     }
   }
 }
-code, pre {
+code,
+pre {
   @apply rounded text-base;
 }
-@import 'prism-one-dark.scss';
+@import "prism-one-dark.scss";
