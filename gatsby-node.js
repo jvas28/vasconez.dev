@@ -5,7 +5,7 @@
  */
 
 // You can delete this file if you're not using it
-const path = require(`path`);
+const path = require(`path`)
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
@@ -19,8 +19,8 @@ exports.createSchemaCustomization = ({ actions }) => {
   createTypes(typeDefs)
 }
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions;
-  const blogPostTemplate = path.resolve(`src/templates/blog-template.js`);
+  const { createPage } = actions
+  const blogPostTemplate = path.resolve(`src/templates/BlogTemplate.js`)
   const result = await graphql(`
     {
       allMarkdownRemark(
@@ -30,7 +30,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         edges {
           node {
             frontmatter {
-              path,
+              path
               lang
             }
           }
@@ -44,7 +44,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    const {path, lang} = node.frontmatter;
+    const { path, lang } = node.frontmatter
     createPage({
       path: path,
       component: blogPostTemplate,

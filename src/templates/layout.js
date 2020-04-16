@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import "../styles/index.scss"
+import "../styles/index.sass"
 const Layout = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen">

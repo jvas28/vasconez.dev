@@ -1,0 +1,14 @@
+.whoAmI
+  @apply bg-transparent m-2 p-3 flex flex-col w-full
+  .imageWrapper
+    @apply flex w-full
+    .profile-photo
+      @apply w-full shadow
+        -webkit-filter: grayscale(100%)
+        filter: grayscale(100%)
+
+@screen md
+  .whoAmI
+    @apply mr-3 flex-row
+    .imageWrapper
+      @apply w-1/2 p-12

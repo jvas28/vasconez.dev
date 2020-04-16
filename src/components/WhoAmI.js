@@ -1,18 +1,13 @@
 import React from "react"
-import Img from "./image"
+import Img from "./ProfileImage"
 import { useIntl, changeLocale } from "gatsby-plugin-intl"
 const WhoAmI = () => {
   const { formatMessage, locale: lang } = useIntl()
   return (
     <>
-      <div
-        className="bg-transparent m-2 p-3
-                 md:mr-3 flex flex-col md:flex-row 
-                w-full 
-                "
-      >
-        <div className="flex w-full md:w-1/2 md:p-12">
-          <Img className="profile-photo w-full shadow" />
+      <div className="whoAmI">
+        <div className="imageWrapper">
+          <Img className="profile-photo" />
         </div>
         <div className="flex  md:w-1/2 flex-col md:p-48">
           <p className="w-full text-2xl text-center text-blue-500">

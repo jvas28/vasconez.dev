@@ -29,9 +29,8 @@ export default function LatestPosts() {
           border border-blue-600
           flex flex-col
           overflow-hidden
-          w-full md:w-3/5
-          text-blue-400
-          mx-5 md:mx-2 "
+          w-full
+          text-blue-400"
     >
       <div className="p-3">
         <p className="text-lg text-gray-500 font-bold">
