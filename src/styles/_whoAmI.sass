@@ -1,22 +1,25 @@
 .whoAmI
-  @apply bg-transparent m-2 p-3 flex flex-col w-full
-  .informationWrapper
-    &:hover
-      background: linear-gradient(#191f2c, #232b3c)
-      background-color: #2390f022
+  background: linear-gradient(to bottom right, #126df5, #232b3c)
+  border-top-left-radius: 30% 6%
+  border-top-right-radius: 30% 6%
+  height: 100%
+  &:hover
+    .informationWrapper
       .clip
         -webkit-transform: translate(0, 0) !important
         -ms-transform: translate(0, 0) !important
         transform: translate(0, 0) !important
+  @apply bg-transparent m-2 p-3 flex flex-col w-full justify-end
+  .informationWrapper
     @apply flex flex-col justify-center w-full
     .name
-      @apply w-full text-2xl text-center text-blue-500
+      @apply w-full text-2xl text-center font-bold text-black
     .headline
-      @apply w-full text-lg text-center text-blue-500 text-sm my-1
+      @apply w-full text-lg text-center text-white text-sm my-1
       .workplace
-        @apply text-purple-700  font-bold cursor-pointer
+        @apply font-bold cursor-pointer text-indigo-200 text-lg
     .location
-      @apply w-full text-lg text-center text-sm my-1 text-blue-300
+      @apply w-full text-lg text-center text-sm my-1 text-white
     .languages
       @apply py-1 px-2 text-xs text-center
       .language-item
@@ -24,20 +27,21 @@
         &.active
           @apply font-bold text-white
     .description
-      @apply py-1 px-1 text-lg italic font-medium font-serif text-gray-600 text-center h-20
+      @apply py-1 px-1 text-xl italic font-medium font-serif text-white text-center h-20
     .contact
       @apply px-2 pt-10 text-xs text-center
     .social
       @apply w-full text-center
       .network
-        color: #5c95e9
-        @apply p-2 text-xl m-2
+        @apply p-2 text-xl m-2 text-white
         &:hover
           transform: scale(1.7)
           transition: transform 400ms
 
 @screen md
   .whoAmI
+    border-top-left-radius: 50% 20%
+    border-top-right-radius: 50% 20%
     @apply flex-row
     .informationWrapper
       .description

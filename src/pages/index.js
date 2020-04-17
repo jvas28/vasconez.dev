@@ -14,9 +14,7 @@ const IndexPage = () => {
       <Section id="home">
         <LatestPosts />
       </Section>
-      <Section id="about">
-        <WhoAmI />
-      </Section>
+      <WhoAmI />
     </Layout>
   )
 }

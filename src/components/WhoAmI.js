@@ -1,18 +1,21 @@
 import React from "react"
 import OctagonImage from "./OctagonImage"
+import Section from "./Section"
 import { useIntl, changeLocale } from "gatsby-plugin-intl"
 const WhoAmI = () => {
   const { formatMessage, locale: lang } = useIntl()
   return (
-    <>
+    <Section id="about" wrap>
       <div className="whoAmI">
+        <div className="background"></div>
         <div className="informationWrapper">
           <OctagonImage />
           <p className="name">Julio Vásconez</p>
           <p className="headline">
             <span className="font-bold">
               {formatMessage({ id: "headline" })}
-            </span>{" "}
+            </span>
+            <br />
             {formatMessage({ id: "at" })}{" "}
             <a
               href="https://web.airlst.com/"
@@ -70,7 +73,7 @@ const WhoAmI = () => {
           </div>
         </div>
       </div>
-    </>
+    </Section>
   )
 }
 
