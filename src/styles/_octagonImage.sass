@@ -1,0 +1,27 @@
+.clip-container
+  position: relative
+  width: 300px
+  height: 300px
+  display: inline-block
+  overflow: hidden
+  @apply self-center
+
+.clip
+  position: absolute
+  width: 300px
+  height: 300px
+  background-repeat: no-repeat
+  background-position: center
+  transition: 0.5s
+
+$name: "octagon"
+
+$transform: translate(-135px, 0px) rotate(110.5deg),translate(0px, 135px) rotate(110.5deg),translate(135px, 0px) rotate(110.5deg),translate(0px, -135px) rotate(110.5deg),translate(0px, 0px) rotate(41deg)
+
+.clip-#{$name} .clip
+  background-image: url('../images/profile.jpg')
+  background-size: contain
+  @for $i from 1 through length($transform)
+    &:nth-child(#{$i})
+      clip-path: url('##{$name}-#{$i}');
+      transform: nth($transform, $i)

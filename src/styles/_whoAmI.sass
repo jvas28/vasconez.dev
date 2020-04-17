@@ -1,14 +1,44 @@
 .whoAmI
   @apply bg-transparent m-2 p-3 flex flex-col w-full
-  .imageWrapper
-    @apply flex w-full
-    .profile-photo
-      @apply w-full shadow
-        -webkit-filter: grayscale(100%)
-        filter: grayscale(100%)
+  .informationWrapper
+    &:hover
+      background: linear-gradient(#191f2c, #232b3c)
+      background-color: #2390f022
+      .clip
+        -webkit-transform: translate(0, 0) !important
+        -ms-transform: translate(0, 0) !important
+        transform: translate(0, 0) !important
+    @apply flex flex-col justify-center w-full
+    .name
+      @apply w-full text-2xl text-center text-blue-500
+    .headline
+      @apply w-full text-lg text-center text-blue-500 text-sm my-1
+      .workplace
+        @apply text-purple-700  font-bold cursor-pointer
+    .location
+      @apply w-full text-lg text-center text-sm my-1 text-blue-300
+    .languages
+      @apply py-1 px-2 text-xs text-center
+      .language-item
+        @apply cursor-pointer p-1 rounded text-gray-600
+        &.active
+          @apply font-bold text-white
+    .description
+      @apply py-1 px-1 text-lg italic font-medium font-serif text-gray-600 text-center h-20
+    .contact
+      @apply px-2 pt-10 text-xs text-center
+    .social
+      @apply w-full text-center
+      .network
+        color: #5c95e9
+        @apply p-2 text-xl m-2
+        &:hover
+          transform: scale(1.7)
+          transition: transform 400ms
 
 @screen md
   .whoAmI
-    @apply mr-3 flex-row
-    .imageWrapper
-      @apply w-1/2 p-12
+    @apply flex-row
+    .informationWrapper
+      .description
+        @apply px-4
