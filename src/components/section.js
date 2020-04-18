@@ -3,7 +3,7 @@ import React from "react"
 export default function Section({ children, id, title = null, wrap = false }) {
   return (
     <section
-      className={`overflow-hidden bg-gray-900 w-full ${
+      className={`overflow-hidden bg-gray-900 w-full mt-16 shadow ${
         wrap ? "" : "min-h-screen"
       }`}
       id={id}

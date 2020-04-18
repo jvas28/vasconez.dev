@@ -1,0 +1,45 @@
+.welcome
+    min-height: 500px
+    @apply flex flex-col w-full overflow-visible
+    .hello
+        min-height: 500px
+        @apply flex w-1/2 flex-col h-full flex-col justify-center pl-10
+        .title
+            @apply text-6xl w-full text-left
+        .subtitle
+            @apply text-xl
+    .writings
+        @apply w-full
+        .list-container
+            @apply flex flex-col flex-wrap
+            .writing-wrapper
+                @apply p-5 flex flex-col text-sm justify-between cursor-pointer items-center w-full
+                .writing
+                    @apply p-3 h-48 border border-blue-500 flex flex-col justify-between
+                    &:hover
+                        box-shadow: 0rem 1rem 1rem 0rem #ffffff1e
+
+                    .title
+                        @apply text-xl font-bold
+                    .tags-container
+                        @apply text-xs text-purple-700 text-white items-center
+                        .tag
+                            @apply text-indigo-500 p-1 rounded font-bold text-lg mr-2 border border-indigo-700
+                            &:hover
+                                @apply bg-indigo-700 text-white
+
+@screen md
+    .welcome
+        @apply flex-row
+        .hello
+            @apply w-2/5
+        .writings
+            @apply w-3/5
+            .list-container
+                @apply flex-row
+                .writing-wrapper
+                    @apply w-1/2
+                    .writing
+                        @apply p-10
+                        .title
+                            @apply text-lg

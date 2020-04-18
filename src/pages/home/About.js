@@ -1,8 +1,8 @@
 import React from "react"
-import OctagonImage from "./OctagonImage"
-import Section from "./Section"
+import OctagonImage from "../../components/OctagonImage"
+import Section from "../../components/Section"
 import { useIntl, changeLocale } from "gatsby-plugin-intl"
-const WhoAmI = () => {
+const About = () => {
   const { formatMessage, locale: lang } = useIntl()
   return (
     <Section id="about" wrap>
@@ -77,4 +77,4 @@ const WhoAmI = () => {
   )
 }
 
-export default WhoAmI
+export default About
