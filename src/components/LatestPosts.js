@@ -49,14 +49,14 @@ export default function LatestPosts() {
                   swipe
                   to={path}
                   direction="left"
-                  className="p-4 flex flex-row text-sm justify-between cursor-pointer hover:bg-blue-900 hover:text-white items-center"
+                  className="p-4 flex flex-col text-sm justify-between cursor-pointer hover:bg-blue-900 hover:text-white items-center"
                 >
                   <p>{title}</p>
-                  <div>
+                  <div className="flex flex-row text-left justify-start self-start">
                     {tags.map(name => (
                       <span
                         key={name}
-                        className="text-xs text-purple-700 text-white items-center"
+                        className="text-xs text-purple-700 text-white border border-indigo-700 p-1 rounded mr-2"
                       >
                         <span>{name}</span>
                       </span>
