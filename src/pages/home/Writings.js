@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useRef, useEffect, useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import Typed from "typed.js"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Section from "../../components/Section"
 export const query = graphql`
@@ -22,12 +23,53 @@ export const query = graphql`
 `
 export default function Writings() {
   const data = useStaticQuery(query)
+  const heading = useRef(null)
+  const subtitle = useRef(null)
+  let [typingHeading, setTypingHeading] = useState(null)
+  let [typingSubtitle, setTypingSubtitle] = useState(null)
+  useEffect(() => {
+    if (typingHeading === null) {
+      if (heading.current !== null) {
+        const options = {
+          strings: ["Hi, I'm Julio", "I'm a developer"],
+          typeSpeed: 120,
+        }
+        setTypingHeading(new Typed(heading.current, options))
+      }
+    }
+  }, [heading, typingHeading])
+  useEffect(() => {
+    if (typingSubtitle === null) {
+      if (subtitle.current !== null) {
+        const options = {
+          strings: [
+            "PHP",
+            "Javascript",
+            "Laravel",
+            "Python",
+            "Grapes JS",
+            "Vue JS",
+            "Angular",
+            "ReactJS - Redux - Saga",
+          ],
+          loop: true,
+          shuffle: true,
+          typeSpeed: 120,
+        }
+        setTypingSubtitle(new Typed(subtitle.current, options))
+      }
+    }
+  }, [subtitle, typingSubtitle])
   return (
-    <Section id="Writings" wrap>
+    <Section id="writings" spaced>
       <div className="welcome">
         <div className="hello">
-          <h1 className="title">Hello</h1>
-          <h1 className="subtitle">Hello</h1>
+          <div className="title">
+            <h1 ref={heading}>$</h1>
+          </div>
+          <div className="subtitle">
+            <h2 ref={subtitle}>...</h2>
+          </div>
         </div>
         <div className="writings">
           <ul className="list-container">
