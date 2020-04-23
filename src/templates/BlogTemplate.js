@@ -17,7 +17,7 @@ const BlogTemplate = props => {
       <Header data={data} />
       <main className="flex flex-col md:flex-row  flex-grow w-full  bg-gray-800 md:p-8">
         <article className="bg-gray-900 mx-auto flex flex-col w-full p-5 md:w-4/6">
-          <h1 className="text-2xl font-extrabold text-white">
+          <h1 className="text-2xl font-extrabold text-blue-600">
             {frontmatter.title}
           </h1>
           <div
