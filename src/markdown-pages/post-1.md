@@ -86,14 +86,15 @@ I'll put this options as property so we can create multiple charts based on this
 
 ```javascript
 import React, { useRef, useEffect } from "react";
+import PropTypes from "prop-types";
 import echarts from "echarts";
 
-export default function Chart({ options }) {
+function Chart({ options }) {
   const myChart = useRef(null);
   useEffect(() => {
     const chart = echarts.init(myChart.current);
     chart.setOption(options);
-  }, [options]);
+  }, [options, resizeObserver]);
 
   return (
     <div
@@ -105,6 +106,13 @@ export default function Chart({ options }) {
     ></div>
   );
 }
+
+Chart.propTypes = {
+  options: PropTypes.any,
+};
+
+export default Chart;
+
 ```
 Well now we can call our component like this.
 
@@ -208,9 +216,14 @@ function App() {
 export default App;
 
 ```
+![SS2](../images/posts/1/ss2.png)
 
-In the next tutorial we'll learn how to make this charts responsive :wink:
+There you go! Now it looks much better!
 
+
+In the next tutorial we'll learn how to make this charts to respond to resizing :rocket:
+
+[React echart component resizing](/posts/2).
 
 
 

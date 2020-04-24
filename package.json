@@ -15,6 +15,7 @@
     "gatsby-plugin-sass": "^2.2.1",
     "gatsby-plugin-sharp": "^2.5.6",
     "gatsby-plugin-transition-link": "^1.18.0",
+    "gatsby-remark-emoji": "^0.0.3",
     "gatsby-remark-images": "^3.2.5",
     "gatsby-remark-prismjs": "^3.4.1",
     "gatsby-source-filesystem": "^2.2.2",
