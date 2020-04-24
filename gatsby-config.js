@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/vasconez.dev",
   siteMetadata: {
     title: `Julio Vasconez`,
     description: `Software Developer`,
@@ -97,7 +98,6 @@ module.exports = {
               escapeEntities: {},
             },
           },
-
         ],
       },
     },
