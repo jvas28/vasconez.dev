@@ -31,8 +31,8 @@ export default function Writings() {
     if (typingHeading === null) {
       if (heading.current !== null) {
         const options = {
-          strings: ["Hi, I'm Julio", "I'm a developer"],
-          typeSpeed: 120,
+          strings: ["", "Hi, I'm Julio", "a fullstack developer", "I love to learn",'and share my knowledge','Enjoy my writings!'],
+          typeSpeed: 100,
         }
         setTypingHeading(new Typed(heading.current, options))
       }

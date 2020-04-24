@@ -1,13 +1,12 @@
 #writings
     background: linear-gradient(to bottom right, #126df5, #232b3c)
     .welcome
-        min-height: 500px
         @apply flex flex-col w-full overflow-visible
         .hello
-            min-height: 500px
-            @apply flex w-1/2 flex-col h-full flex-col justify-center pl-10
+            min-height: 250px;
+            @apply flex w-1/2 flex-col flex-col justify-center pl-10 w-full flex-1
             .title
-                @apply text-4xl w-full text-left flex flex-row inline-flex
+                @apply text-2xl w-full text-left flex flex-row inline-flex
             .subtitle
                 @apply text-xl flex inline-flex
         .writings
@@ -18,7 +17,7 @@
                     @apply p-5 flex flex-col text-sm justify-between cursor-pointer items-center w-full
                     .writing
                         transition: transform 1s
-                        @apply p-3 h-48 flex flex-col justify-between bg-blue-900
+                        @apply p-5 h-48 flex flex-col justify-between bg-blue-900 w-full
                         &:hover
                             box-shadow: 0rem 1rem 1rem 0rem #40a2d01e
                             transform: scale(1.05)
@@ -45,6 +44,23 @@
                     .writing-wrapper
                         @apply w-1/2
                         .writing
-                            @apply p-10
+                            @apply p-5
                             .title
                                 @apply text-lg
+@screen lg
+#writings
+    .welcome
+    @apply flex-row
+        .hello
+        @apply w-2/5
+        .writings
+        @apply w-3/5
+            .list-container
+            @apply flex-row
+                .writing-wrapper
+                @apply w-1/2
+                    .writing
+                    @apply p-10
+                        .title
+                        @apply text-3xl
+

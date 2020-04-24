@@ -30,21 +30,21 @@ const About = () => {
             <i className="fas fa-map-marker-alt"></i>{" "}
             {formatMessage({ id: "location" })}
           </p>
-          <p className="languages">
-            <button
-              className={`language-item ${lang === "es" ? "active" : ""}`}
-              onClick={() => changeLocale("es")}
-            >
-              ES
-            </button>{" "}
-            |{" "}
-            <button
-              className={`language-item ${lang === "en" ? "active" : ""}`}
-              onClick={() => changeLocale("en")}
-            >
-              EN
-            </button>
-          </p>
+          {/*<p className="languages">*/}
+          {/*  <button*/}
+          {/*    className={`language-item ${lang === "es" ? "active" : ""}`}*/}
+          {/*    onClick={() => changeLocale("es")}*/}
+          {/*  >*/}
+          {/*    ES*/}
+          {/*  </button>{" "}*/}
+          {/*  |{" "}*/}
+          {/*  <button*/}
+          {/*    className={`language-item ${lang === "en" ? "active" : ""}`}*/}
+          {/*    onClick={() => changeLocale("en")}*/}
+          {/*  >*/}
+          {/*    EN*/}
+          {/*  </button>*/}
+          {/*</p>*/}
           <p className="description">
             "{formatMessage({ id: "description" })}"
           </p>

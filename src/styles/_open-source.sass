@@ -1,11 +1,11 @@
 #open-source
     .projects
-        @apply flex w-full
+        @apply flex w-full flex-col
         .project
             border-width: 3px
             border-style: solid
             border-image: linear-gradient(to bottom, #2caaf9, #035bb8 ) 1 100%
-            @apply w-1/4 p-10 cursor-pointer
+            @apply w-full p-10 cursor-pointer
             .project-front
                 border-width: 3px
                 border-style: solid
@@ -45,3 +45,8 @@
                 -webkit-background-clip: text
                 -webkit-text-fill-color: transparent
                 @apply mx-2
+
+@screen md
+    #open-source
+        .projects
+            @apply flex-row

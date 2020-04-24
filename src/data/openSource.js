@@ -32,7 +32,7 @@ const projects = [
   {
     image: thisSiteLogo,
     title: "Yep! this site",
-    description: "Chart components plugin for Grapes JS, powered by echarts",
+    description: "Not a fork from other dev or designer, just a Gatsby project and some Styles.",
     url: "https://github.com/jvas28/vasconez.dev",
     stack: ["gatsby"],
   },

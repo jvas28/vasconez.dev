@@ -26,7 +26,6 @@ export default function LatestPosts() {
     <div
       className="
           bg-transparent
-          border border-blue-600
           flex flex-col
           overflow-hidden
           w-full
@@ -49,10 +48,10 @@ export default function LatestPosts() {
                   swipe
                   to={path}
                   direction="left"
-                  className="p-4 flex flex-col text-sm justify-between cursor-pointer hover:bg-blue-900 hover:text-white items-center"
+                  className="p-4 flex flex-col text-sm justify-between cursor-pointer hover:bg-blue-900 hover:text-white border border-blue-600 my-1"
                 >
-                  <p>{title}</p>
-                  <div className="flex flex-row text-left justify-start self-start">
+                  <p className="mb-2">{title}</p>
+                  <div className="flex flex-row justify-end">
                     {tags.map(name => (
                       <span
                         key={name}
