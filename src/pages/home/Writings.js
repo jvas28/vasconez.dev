@@ -26,49 +26,31 @@ export default function Writings() {
   const heading = useRef(null)
   const subtitle = useRef(null)
   let [typingHeading, setTypingHeading] = useState(null)
-  let [typingSubtitle, setTypingSubtitle] = useState(null)
   useEffect(() => {
     if (typingHeading === null) {
       if (heading.current !== null) {
         const options = {
-          strings: ["", "Hi, I'm Julio", "a fullstack developer", "I love to learn",'and share my knowledge','Enjoy my writings!'],
+          strings: [
+            "",
+            "Hi, I'm Julio",
+            "a fullstack developer",
+            "I love to learn",
+            "and share my knowledge",
+            "Enjoy my writings!",
+          ],
           typeSpeed: 100,
         }
         setTypingHeading(new Typed(heading.current, options))
       }
     }
-  }, [heading, typingHeading])
-  useEffect(() => {
-    if (typingSubtitle === null) {
-      if (subtitle.current !== null) {
-        const options = {
-          strings: [
-            "PHP",
-            "Javascript",
-            "Laravel",
-            "Python",
-            "Grapes JS",
-            "Vue JS",
-            "Angular",
-            "ReactJS - Redux - Saga",
-          ],
-          loop: true,
-          shuffle: true,
-          typeSpeed: 120,
-        }
-        setTypingSubtitle(new Typed(subtitle.current, options))
-      }
-    }
-  }, [subtitle, typingSubtitle])
+  })
+
   return (
     <Section id="writings" spaced>
       <div className="welcome">
         <div className="hello">
           <div className="title">
             <h1 ref={heading}>$</h1>
-          </div>
-          <div className="subtitle">
-            <h2 ref={subtitle}>...</h2>
           </div>
         </div>
         <div className="writings">

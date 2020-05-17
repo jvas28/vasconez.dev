@@ -3,7 +3,7 @@
     .welcome
         @apply flex flex-col w-full overflow-visible
         .hello
-            min-height: 250px;
+            min-height: 250px
             @apply flex w-1/2 flex-col flex-col justify-center pl-10 w-full flex-1
             .title
                 @apply text-2xl w-full text-left flex flex-row inline-flex
@@ -12,22 +12,23 @@
         .writings
             @apply w-full
             .list-container
-                @apply flex flex-col flex-wrap
+                @apply flex flex-col flex-wrap h-full
                 .writing-wrapper
                     @apply p-5 flex flex-col text-sm justify-between cursor-pointer items-center w-full
                     .writing
                         transition: transform 1s
-                        @apply p-5 h-48 flex flex-col justify-between bg-blue-900 w-full
+                        min-height: 8rem
+                        @apply flex flex-col justify-between bg-blue-900 w-full rounded-lg overflow-hidden
                         &:hover
-                            box-shadow: 0rem 1rem 1rem 0rem #40a2d01e
+                            box-shadow: 0rem 1rem 1rem 0rem #35637a1e
                             transform: scale(1.05)
-                            transition: transform 400ms
+                            transition: transform 400ms, shadow 1s
                         .title
-                            @apply text-xl font-bold
+                            @apply text-xl font-bold w-full bg-blue-900 p-3
                         .tags-container
-                            @apply text-xs text-purple-700 text-white items-center
+                            @apply text-xs text-purple-700 text-white items-center p-3 text-right
                             .tag
-                                @apply text-indigo-500 p-1 rounded font-bold text-lg mr-2 border border-indigo-700
+                                @apply text-indigo-500 p-1 rounded font-bold text-base mr-2 border border-indigo-700
                                 &:hover
                                     @apply bg-indigo-700 text-white
 
@@ -44,7 +45,6 @@
                     .writing-wrapper
                         @apply w-1/2
                         .writing
-                            @apply p-5
                             .title
                                 @apply text-lg
 @screen lg
@@ -63,4 +63,3 @@
                     @apply p-10
                         .title
                         @apply text-3xl
-
