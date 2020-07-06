@@ -24,7 +24,6 @@ export const query = graphql`
 export default function Writings() {
   const data = useStaticQuery(query)
   const heading = useRef(null)
-  const subtitle = useRef(null)
   let [typingHeading, setTypingHeading] = useState(null)
   useEffect(() => {
     if (typingHeading === null) {
