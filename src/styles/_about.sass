@@ -1,7 +1,4 @@
 .whoAmI
-  background: linear-gradient(to bottom right, #126df5, #232b3c)
-  border-top-left-radius: 30% 6%
-  border-top-right-radius: 30% 6%
   height: 100%
   &:hover
     .informationWrapper
@@ -13,13 +10,13 @@
   .informationWrapper
     @apply flex flex-col justify-center w-full
     .name
-      @apply w-full text-2xl text-center font-bold text-black
+      @apply w-full text-xl text-center font-bold text-gray-100
     .headline
-      @apply w-full text-lg text-center text-white text-sm my-1
+      @apply w-full text-base text-center text-white my-1
       .workplace
-        @apply font-bold cursor-pointer text-indigo-200 text-lg
+        @apply font-bold cursor-pointer text-indigo-200 text-base
     .location
-      @apply w-full text-lg text-center text-sm my-1 text-white
+      @apply w-full text-center text-sm my-1 text-white
     .languages
       @apply py-1 px-2 text-xs text-center
       .language-item
@@ -27,21 +24,19 @@
         &.active
           @apply font-bold text-white
     .description
-      @apply py-1 px-1 text-xl italic font-medium font-serif text-white text-center h-20
+      @apply py-1 px-1 text-base font-light  text-white text-center italic opacity-75
     .contact
-      @apply px-2 pt-10 text-xs text-center
+      @apply px-2 pt-10 text-sm text-center
     .social
       @apply w-full text-center
       .network
-        @apply p-2 text-xl m-2 text-white
+        @apply p-2 text-xl m-1 text-white
         &:hover
           transform: scale(1.7)
           transition: transform 400ms
 
 @screen md
   .whoAmI
-    border-top-left-radius: 50% 20%
-    border-top-right-radius: 50% 20%
     @apply flex-row
     .informationWrapper
       .description

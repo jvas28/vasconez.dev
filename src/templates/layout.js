@@ -7,11 +7,15 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import SEO from "../components/SEO"
 import "../styles/index.sass"
+import SideContent from "../pages/home/SideContent"
 const Layout = ({ children }) => {
   return (
-    <div className="flex flex-col min-h-screen">
-      <main className="flex-grow">{children}</main>
+    <div className="layout">
+      <SEO title="Home" />
+      <SideContent />
+      <main id="main-content">{children}</main>
     </div>
   )
 }
