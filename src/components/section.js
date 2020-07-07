@@ -10,11 +10,13 @@ export default function Section({
   return (
     <section
       id={id}
-      className={`${cover ? "cover" : ""} ${spaced ? "spaced" : ""}`}
+      className={`${cover ? "cover " : ""} ${spaced ? "spaced" : ""}`}
     >
       {title && <h1 className="heading">{title}</h1>}
-      <div className="flex flex-col items-center justify-center">
-        {children}
+      <div className="flex w-full justify-center">
+        <div className="justify-center container flex flex-col items-center ">
+          {children}
+        </div>
       </div>
     </section>
   )

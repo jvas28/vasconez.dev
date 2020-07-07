@@ -3,12 +3,12 @@ import OctagonClipPath from "./OctagonClipPath"
 export default () => (
   <>
     <OctagonClipPath />
-    <div class="clip-container clip-octagon">
-      <div class="clip"></div>
-      <div class="clip"></div>
-      <div class="clip"></div>
-      <div class="clip"></div>
-      <div class="clip"></div>
+    <div className="clip-container clip-octagon">
+      <div className="clip"></div>
+      <div className="clip"></div>
+      <div className="clip"></div>
+      <div className="clip"></div>
+      <div className="clip"></div>
     </div>
   </>
 )

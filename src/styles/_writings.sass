@@ -1,65 +1,18 @@
 #writings
-    background: linear-gradient(to bottom right, #126df5, #232b3c)
-    .welcome
-        @apply flex flex-col w-full overflow-visible
-        .hello
-            min-height: 250px
-            @apply flex w-1/2 flex-col flex-col justify-center pl-10 w-full flex-1
-            .title
-                @apply text-2xl w-full text-left flex flex-row inline-flex
-            .subtitle
-                @apply text-xl flex inline-flex
-        .writings
-            @apply w-full
-            .list-container
-                @apply flex flex-col flex-wrap h-full
-                .writing-wrapper
-                    @apply p-5 flex flex-col text-sm justify-between cursor-pointer items-center w-full
-                    .writing
-                        transition: transform 1s
-                        min-height: 8rem
-                        @apply flex flex-col justify-between bg-blue-900 w-full rounded-lg overflow-hidden
-                        &:hover
-                            box-shadow: 0rem 1rem 1rem 0rem #35637a1e
-                            transform: scale(1.05)
-                            transition: transform 400ms, shadow 1s
-                        .title
-                            @apply text-xl font-bold w-full bg-blue-900 p-3
-                        .tags-container
-                            @apply text-xs text-purple-700 text-white items-center p-3 text-right
-                            .tag
-                                @apply text-indigo-500 p-1 rounded font-bold text-base mr-2 border border-indigo-700
-                                &:hover
-                                    @apply bg-indigo-700 text-white
-
-@screen md
-    #writings
-        .welcome
-            @apply flex-row
-            .hello
-                @apply w-2/5
-            .writings
-                @apply w-3/5
-                .list-container
-                    @apply flex-row
-                    .writing-wrapper
-                        @apply w-1/2
-                        .writing
-                            .title
-                                @apply text-lg
-@screen lg
-#writings
-    .welcome
-    @apply flex-row
-        .hello
-        @apply w-2/5
-        .writings
-        @apply w-3/5
-            .list-container
-            @apply flex-row
-                .writing-wrapper
-                @apply w-1/2
-                    .writing
-                    @apply p-10
-                        .title
-                        @apply text-3xl
+    @apply flex w-full
+    .list-container
+        @apply flex w-full flex-col
+        .writing-wrapper
+            @apply flex w-full
+            .writing
+                @apply p-8 text-center w-full cursor-pointer
+                &:hover
+                    @apply bg-blue-900
+                .title
+                    @apply font-bold text-3xl
+                .excerpt
+                    @apply text-gray-400
+                .tags-container
+                    @apply flex w-full justify-center p-2
+                    .tag
+                        @apply mx-1 p-1 bg-indigo-600 rounded uppercase text-sm

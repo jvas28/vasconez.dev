@@ -1,52 +1,11 @@
 #open-source
+    @apply mt-5
+    .title-wrapper
+        @apply flex w-full p-3 justify-center items-center
+        .title
+            @apply text-xl
     .projects
         @apply flex w-full flex-col
         .project
-            border-width: 3px
-            border-style: solid
-            border-image: linear-gradient(to bottom, #2caaf9, #035bb8 ) 1 100%
-            @apply w-full p-10 cursor-pointer
-            .project-front
-                border-width: 3px
-                border-style: solid
-                border-image: linear-gradient(to bottom, #2caaf9, #035bb8 ) 1 100%
-                @apply p-5 flex flex-col justify-center
-                .icon
-                    @apply w-48 self-center
-                .title
-                    @apply text-white
-
-            .project-back
-                @apply flex flex-col
-                .stack
-                    @apply flex flex-row justify-center
-                    .technology
-                        @apply text-blue-600 font-bold mx-2
-                .actions
-                    @apply flex flex-col self-end w-full mt-4
-                    .preview
-                        @apply bg-blue-600 text-white p-2 rounded
-                    .source
-                        @apply text-indigo-500 p-2
-    .find-out
-        @apply flex w-full p-24 justify-center
-        .github
-            border-width: 3px
-            border-style: solid
-            border-image: linear-gradient(to bottom, #2caaf9, #035bb8 ) 1
-            background: linear-gradient(to bottom, #2caaf9, #035bb8 )
-            background-clip: text
-            -webkit-background-clip: text
-            -webkit-text-fill-color: transparent
-            @apply p-3 self-center text-white text-xl align-baseline
-            i
-                background: linear-gradient(to bottom, #2caaf9, #035bb8 )
-                background-clip: text
-                -webkit-background-clip: text
-                -webkit-text-fill-color: transparent
-                @apply mx-2
-
-@screen md
-    #open-source
-        .projects
-            @apply flex-row
+            background: #ffffff1c
+            @apply p-4 mx-3 my-1 rounded font-bold text-center
